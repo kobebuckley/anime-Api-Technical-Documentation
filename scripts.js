@@ -82,6 +82,7 @@ function episodeList() {
                           "<h4>" + episode.title_japanese + " : " + episode.title + "</h4>";
 
     var episodeLink = document.createElement("a");
+    episodeLink.target = "_blank";
     episodeLink.href = episode.url;
     episodeLink.textContent = "Link to Episode";
     episodeLi.appendChild(episodeLink);
