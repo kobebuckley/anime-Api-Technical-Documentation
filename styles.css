@@ -57,3 +57,23 @@ header{
 #topic_5 {
     
 }  */
+.insert-info {
+    font-weight: bold;
+}
+
+code {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: black;
+    color: darkorange;
+    padding: 10px;
+    border-radius: 10px;
+    width: 33%;
+    max-width: 100%;
+    max-height: 100%;
+    /* white-space: pre; */
+    /* overflow: auto; */
+  }
+  

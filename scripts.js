@@ -20,7 +20,7 @@ async function fetchData() {
 }
 
 
-// !#1 - Method to access the animelist data for Demon Slayer and share it on your website using (getAnimeFullById)
+// #1 - Method to access the animelist data for Demon Slayer and share it on your website using (getAnimeFullById)
 function generalAccess() {
   console.log("general demon slayer info: ",jsonData)
 }
@@ -35,15 +35,6 @@ function title() {
   console.log("Japanese Title: ",JapaneseTitle,"English Title: ",englishTitle)
 }
 
-
-// #1 - Method to access the episode amount
-
-function episodeAmount() {
-  console.log("There are: ",jsonData['episodes']," episodes")
-}
-
-
-
 // let newImgElement;
 
 // #1 - Method to access the image
@@ -53,12 +44,16 @@ function firstImage() {
   console.log("Here is the image: ", grabbedImage)
   let newImgElement = document.createElement("img");
   newImgElement.src = grabbedImage;
-// Append the image element to a container in the HTML document
-   let imageSection = document.getElementById("insert-image");
-   imageSection.appendChild(newImgElement);
+  let imageSection = document.getElementById("insert-image");
+  imageSection.appendChild(newImgElement);
 }
 
 
+// #1 - Method to access the episode amount
+
+function episodeAmount() {
+  console.log("There are: ",jsonData['episodes']," episodes")
+}
 
 
 
