@@ -6,10 +6,10 @@ async function fetchData() {
   try {
     const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/full`);
     const retrievedData = await response.json();
-    console.log(retrievedData);
+    // console.log(retrievedData);
     jsonData = retrievedData.data;
-    console.log("here are the available data options: ", jsonData)
-    grabUrl();
+    generalAccess();
+    episodeAmount();
 
 
 
@@ -19,9 +19,21 @@ async function fetchData() {
 }
 
 
-function grabUrl() {
-  console.log("url data here :",jsonData['url']);
+// !#1 - Method to access the animelist data for Demon Slayer and share it on your website using (getAnimeFullById)
+function generalAccess() {
+  console.log("general demon slayer info: ",jsonData)
 }
+
+// #1 - Method to access the episode amount
+
+function episodeAmount() {
+  console.log("There are: ",jsonData['episodes']," episodes")
+}
+
+// #1 - Method to access the image
+
+// #1 - Method to access the japanese title
+
 
 
 
