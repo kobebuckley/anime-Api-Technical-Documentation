@@ -4,18 +4,70 @@ body, html {
 }
 
 #navbar {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 0;
     left: 0;
     width: 12.5%;
     height: 100%;
     background-color: #f1f1f1;
-}
+  }
+  
+  #navbar-title {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+  
+  #navbar a {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  #navbar li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #333;
+    border-bottom: solid black 2px;
+    padding: 50px 50px 50px 50px;
+    margin-left: -40px; 
+  }
+  
 
-.nav-link {
-    background-color: red;    
-}
+  #navbar a:hover {
+    color: rgba(255, 166, 0, 0.986)
+  }
+  
+   a:hover {
+    color: rgba(255, 166, 0, 0.986)
+  }
 
+  a {
+    text-decoration: none;
+  }
+  
+  
+  #navbar li:first-of-type {
+    border-top: solid black 2px;
+
+  }
+
+  .nav-link {
+    color: #333;
+  }
+
+  
 #main-doc {
     margin-left: 12.5%;
     height: 1000px; 
@@ -30,39 +82,6 @@ header{
     padding: 20px 10px;
 }
 
-
-/* .main-section {
-    background-color: green;
- 
-} */
-
-
-
-
-/* #topic_1 {
-}
-
-#topic_2 {
-    
-}
-
-#topic_3 {
-    
-}
-
-#topic_4 {
-    
-}
-
-#topic_5 {
-    
-}  */
-
-
-
-
-
-
 .insert-info {
     font-weight: bold;
 }
@@ -73,7 +92,7 @@ code {
     align-items: flex-start;
     justify-content: center;
     background-color: black;
-    color: darkorange;
+    color: rgba(255, 166, 0, 0.986);
     padding: 10px;
     border-radius: 10px;
     width: 33%;
@@ -88,16 +107,18 @@ code {
     list-style: square;
     display: flex;
     flex-wrap: wrap;
-    max-height: 120000px;
+    max-height: 12000px;
     overflow: auto;
   }
   
   #insert-episode-list li {
-    flex-basis: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
+      flex-basis: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    
+
+    /* ! media query section  */
   @media (min-width: 600px) {
     #insert-episode-list li {
       flex-basis: 50%;
@@ -109,38 +130,3 @@ code {
       flex-basis: 33.33%;
     }
   }
-  
-    /* justify-content: center;
-    padding: 10px;
-    border-radius: 10px;
-    width: 33%;
-    max-width: 100%;
-    max-height: 100%; */
-
-
-
-
-  /* li {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-   
-    padding: 10px;
-
-} */
-
-
-
-
-
-  /* ! media query section  */
-
-
-
-
-
-
-
-
