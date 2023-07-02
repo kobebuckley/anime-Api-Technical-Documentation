@@ -19,6 +19,19 @@ async function fetchData() {
   }
 }
 
+async function fetchEpisodeData() {
+  try {
+    const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/episodes`)
+    const retrievedData = await response.json();
+    // console.log(retrievedData);
+    jsonEpisodeData = retrievedData.data;
+    episodeList()
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 
 // #1 - Method to access the animelist data for Demon Slayer and share it on your website using (getAnimeFullById)
 function generalAccess() {
@@ -56,7 +69,26 @@ function episodeAmount() {
 }
 
 
+function episodeList() {
+  console.log("Episode List is: ", jsonEpisodeData);
 
+  var episodeContainer = document.getElementById("insert-episode-list");
+
+  for (var i = 0; i < jsonEpisodeData.length; i++) {
+    var episode = jsonEpisodeData[i];
+
+    var episodeLi = document.createElement("li");
+    episodeLi.innerHTML = "<h3>" + "Episode # : " + episode.mal_id + "</h3>" +
+                          "<h4>" + episode.title_japanese + " : " + episode.title + "</h4>";
+
+    var episodeLink = document.createElement("a");
+    episodeLink.href = episode.url;
+    episodeLink.textContent = "Link to Episode";
+    episodeLi.appendChild(episodeLink);
+    episodeContainer.appendChild(episodeLi);
+  }
+}
 
 
 fetchData();
+fetchEpisodeData();

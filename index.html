@@ -9,6 +9,8 @@
 </head>
 
 <body>
+
+    <!--!  NAV SECTION -->
     <nav id="navbar">
         <header id="navbar-title">Jikan Api Docs: Anime</header>
 
@@ -24,65 +26,97 @@
 
     <main id="main-doc">
 
+    <!--!  INTRO SECTION -->
+
         <section class="main-section">
-            
             <header id="intro">Using Jikan Api for Demon Slayer</header>
             <section>
-                <p>Intro</p>
+                <h2>Intro</h2>
                 <p class="insert-info">insert the code to grab the initial data as well as specifically the Demon Slayer data</p>
-                <code></code>
-          
+                <code>
+
+                </code>
                 <p id="explanation">explanation here</p>
-
-                <!-- <hr> -->
-                <!-- <hr> -->
         </section>
-
-
-
-
-
+    <!--!  TITLE - IMAGE - EPISODE SECTION -->
 
         <section class="main-section">
-            <header id="getAnimeFullById">Grab data from an anime</header>
+            <header id="getAnimeFullById">Grab titles from Demon Slayer</header>
             <section>
-                <p>Method to access the Japanese & English title for Demon Slayer</p>
+                <h2>Method to access the Japanese & English title for Demon Slayer</h2>
                 <p class="insert-info" id="insert-info">insert titles here and bold it as default</p>
                 <code>
                     let JapaneseTitle;<br><br>
                     let englishTitle;<br><br>
-                    
                     function title() {<br><br>
                       let JapaneseTitle = jsonData['title_japanese'] <br><br>
                       let englishTitle = jsonData['title_english'] <br><br>
                       console.log("Japanese Title: ",JapaneseTitle,"English Title: ",englishTitle) <br><br>
-                    }</code>
-
+                    }
+                </code>
                 <p id="explanation">explanation here</p>
-
-                    <hr>
-                    <hr>
-
-                    <p>Method to access a large image for Demon Slayer</p>
-                    <p class="insert-info" id="insert-image"></p>
-                    <code></code>
-                    <p id="explanation">explanation here</p>
-
-                    <hr>
-                    <hr>
-
-                <p>Method to access the episode amount</p>
-                <p class="insert-info" id="insert-episode-number">insert amount of episodes here</p>
-                <code></code>
-                <p id="explanation">explanation here</p>
-
-                <!-- <li>code block above me - this bullet point might be useful too</li> -->
-                <!-- <a id="nav-link" href="#">a link if needed</a> -->
             </section>
-            
+        </section>
+
+        <section class="main-section">
+            <header id="getAnimeFullById">Grab Image from Demon Slayer</header>
+            <section>
+                <h2>Method to access a large image for Demon Slayer</h2>
+                <p class="insert-info" id="insert-image"></p>
+                <code>
+                    function firstImage() { <br><br>
+                        let grabbedImage = jsonData['images']['jpg']['large_image_url']<br><br>
+                        console.log("Here is the image: ", grabbedImage)<br><br>
+                        let newImgElement = document.createElement("img");<br><br>
+                        newImgElement.src = grabbedImage;<br><br>
+                        let imageSection = document.getElementById("insert-image");<br><br>
+                        imageSection.appendChild(newImgElement);<br><br>
+                      }
+                      
+                </code>
+                <p id="explanation">explanation here</p>
+            </section>  
+        </section>
+S
+        <section class="main-section">
+            <header id="getAnimeFullById"> [uses different link] getAnimeEpisodes - Grab episode number and the list from Demon Slayer</header>
+            <section>
+                <h2>Method to access the episode amount</h2>
+                <p class="insert-info" id="insert-episode-number">insert amount of episodes here</p>
+                <code>
+
+                </code>
+                <p id="explanation">explanation here</p>
+                <hr>
+                <hr>
+                <h2 class="insert-info" id="">List of Season 1 Episodes</h2>
+                <ul class="episodes-list" id='insert-episode-list'>
+                </ul>
+
+
+
+                <code>
+                    
+                </code>
+                <p id="explanation">explanation #2 here</p>
+                <!-- <li> <a id="external-link" href="">hmmmmm 1</a></li> -->
+               
+            </section>
         </section>
 
 
+
+    <!--!  MORE... SECTION -->
+
+    <section class="main-section">
+        <header id="getAnimeFullById">REFERENCE JIKAN API AND ANIME LIST HERE</header>
+        <section>
+            <p>Method to access the episode amount</p>
+            <p class="insert-info" id="insert-episode-number">insert amount of episodes here</p>
+            <code></code>
+            <p id="explanation">explanation here</p>
+        </section>
+    </section>
 
 
         <!-- ! need to remake bottom portion based on the above -->
