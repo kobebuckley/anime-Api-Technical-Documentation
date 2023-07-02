@@ -10,7 +10,7 @@ async function fetchData() {
     jsonData = retrievedData.data;
     generalAccess();
     episodeAmount();
-
+    firstImage();
 
 
   } catch (error) {
@@ -30,7 +30,23 @@ function episodeAmount() {
   console.log("There are: ",jsonData['episodes']," episodes")
 }
 
+
+
+// let newImgElement;
+
 // #1 - Method to access the image
+
+function firstImage() {
+  let grabbedImage = jsonData['images']['jpg']['large_image_url']
+  console.log("Here is the image: ", grabbedImage)
+  let newImgElement = document.createElement("img");
+  newImgElement.src = grabbedImage;
+// Append the image element to a container in the HTML document
+   let imageSection = document.getElementById("insert-image");
+   imageSection.appendChild(newImgElement);
+
+  // console.log("Here is the image: ",jsonData['images']['jpg']['large_image_url'])
+}
 
 // #1 - Method to access the japanese title
 
