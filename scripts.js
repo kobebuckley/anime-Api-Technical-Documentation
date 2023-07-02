@@ -9,6 +9,7 @@ async function fetchData() {
     // console.log(retrievedData);
     jsonData = retrievedData.data;
     generalAccess();
+    title();
     episodeAmount();
     firstImage();
 
@@ -23,6 +24,17 @@ async function fetchData() {
 function generalAccess() {
   console.log("general demon slayer info: ",jsonData)
 }
+
+// #1 - Method to access the English & Japanese title
+let JapaneseTitle;
+let englishTitle;
+
+function title() {
+  let JapaneseTitle = jsonData['title_japanese']
+  let englishTitle = jsonData['title_english']
+  console.log("Japanese Title: ",JapaneseTitle,"English Title: ",englishTitle)
+}
+
 
 // #1 - Method to access the episode amount
 
@@ -44,11 +56,8 @@ function firstImage() {
 // Append the image element to a container in the HTML document
    let imageSection = document.getElementById("insert-image");
    imageSection.appendChild(newImgElement);
-
-  // console.log("Here is the image: ",jsonData['images']['jpg']['large_image_url'])
 }
 
-// #1 - Method to access the japanese title
 
 
 
