@@ -69,7 +69,13 @@ body, html {
     color: #333;
   }
 
-  
+  hr {
+    border: solid rgba(31, 30, 30, 0.733) 2px;
+    width: 33%;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;  }
+
 #main-doc {
     margin-left: 12.5%;
     height: 1000px; 
@@ -79,7 +85,7 @@ body, html {
 .main-section {
   /* background-color: red; */
   /* margin: 0; */
-  padding: 20px;
+  padding: 10px 60px 10px 60px;
 }
 
 
@@ -138,3 +144,7 @@ code {
       flex-basis: 33.33%;
     }
   }
+
+#attribution {
+  padding-bottom: 20px;
+}

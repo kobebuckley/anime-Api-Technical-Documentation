@@ -20,8 +20,8 @@
             <li><a class="nav-link" id="imageData" href="#image-data">Demon Slayer Image</a></li>
             <li><a class="code-link" id="imageCode" href="#image-code">Image Code<a></li>
             <li><a class="nav-link" id="episodeData" href="#episode-list-data">Demon Slayer Episodes</a></li>
-            <li><a class="code-link" id="episodeCode" href="#episode-code">Episode Code<a></li>
-            <li><a target="_blank"  id="jikanApi" href="https://jikan.moe/">Jikan Api</a></li>
+            <li><a class="code-link" id="episodeCode" href="#episode-code">Episode List Code<a></li>
+            <li><a target="_blank"  id="jikanApi" href="https://jikan.moe/">Jikan Api Link</a></li>
 
         </ul>
     </nav>
@@ -32,12 +32,11 @@
 
         <section class="main-section" id="title-data">
             <header id="getAnimeFullById">Method to access the Japanese & English title for Demon Slayer the anime</header>
-            <hr>
             <section>
-                <!-- <h2>Method to access the Japanese & English title for Demon Slayer</h2> -->
                 <p class="insert-info" id="insert-title"></p>
-                <p id="explanation">Code used below</p>
                 <hr>
+
+                <p id="snippet">* Code Snippet *</p>
                 <code id="title-code">
                     let JapaneseTitle;<br><br>
                     let englishTitle;<br><br>
@@ -53,11 +52,11 @@
 
         <section class="main-section" id="image-data">
             <header id="getAnimeFullById">Method to access a large image for Demon Slayer</header>
-            <hr>
             <section>
-                <!-- <h2>Method to access a large image for Demon Slayer</h2> -->
                 <p class="insert-info" id="insert-image"></p>
-                <p id="explanation">Code used below</p>
+                <p id="attribution">Image <a  target="_blank" href='https://cdn.myanimelist.net/images/anime/1286/99889l.jpg'>Attribution</a></p>   
+                <hr>
+                <p id="snippet">* Code Snippet *</p>
                 <code id="image-code">
                     function firstImage() { <br><br>
                         let grabbedImage = jsonData['images']['jpg']['large_image_url']<br><br>
@@ -74,11 +73,11 @@
 
         <section class="main-section" id="episode-list-data">
             <header class="insert-info" id="s1EpisodeNumber"></header>
-            <hr>
             <section>
                 <p id="explanation">Using the same api url to also grab the episode amount data</p>
-                <p id="explanation">Code used below</p>
-                <code id="episode-code">
+                <hr>
+                <p id="snippet">* Code Snippet *</p>
+                <code>
                     
                     function episodeAmount() { <br><br>
                         console.log("There are: ",jsonData['episodes']," episodes")<br><br>
@@ -89,12 +88,11 @@
                 </code>
                 <hr>
                 
-                <ul class="episodes-list" id='insert-episode-list'>
-                </ul>
-                <hr>
-                <p id="explanation">Needed to use a different <a href='https://api.jikan.moe/v4/anime/${animeId}/episodes" to grab the episode list'>api link</a> for this list</p>               
-                <p id="explanation">Code used below</p>               
-                <code>
+                <ul class="episodes-list" id='insert-episode-list'></ul>
+                <p id="explanation">Needed to use a different <a target="_blank" href='https://api.jikan.moe/v4/anime/38000/episodes'>api link</a> for this list</p>   
+                <hr>            
+                <p id="snippet">* Code Snippet *</p>
+                <code  id="episode-code">
                     const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/episodes`) <br><br>
                     
                     function episodeList() {<br><br>
@@ -117,7 +115,8 @@
                     }
                 </code>
                 <hr>
-
+               
+                
             </section>
         </section>
         
