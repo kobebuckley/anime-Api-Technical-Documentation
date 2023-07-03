@@ -16,38 +16,29 @@
 
         <ul>
             <li><a class="nav-link" id="titleData" href="#title-data">Demon Slayer Title</a></li>
+            <li><a class="code-link" id="titleCode" href="#title-code">Title Code</a></li>
             <li><a class="nav-link" id="imageData" href="#image-data">Demon Slayer Image</a></li>
-            <li><a class="nav-link" id="episodeNumberData" href="#episode-list-data">Demon Slayer Episodes</a></li>
-            <!-- <li><a class="nav-link" id="episodeListData" href="#">Demon Slayer ...</a></li> -->
-            <!-- <li><a class="nav-link" id="" href="#getAnimeNews">Demon Slayer ...</a></li> -->
-            <li><a target="_blank"  id="" href="https://jikan.moe/">Jikan Api</a></li>
+            <li><a class="code-link" id="imageCode" href="#image-code">Image Code<a></li>
+            <li><a class="nav-link" id="episodeData" href="#episode-list-data">Demon Slayer Episodes</a></li>
+            <li><a class="code-link" id="episodeCode" href="#episode-code">Episode Code<a></li>
+            <li><a target="_blank"  id="jikanApi" href="https://jikan.moe/">Jikan Api</a></li>
 
         </ul>
     </nav>
 
     <main id="main-doc">
 
-    <!--!  INTRO SECTION -->
-
-        <section class="main-section">
-            <header id="intro">Using Jikan Api for Demon Slayer</header>
-            <section>
-                <h2>Intro</h2>
-                <p class="insert-info">insert the code to grab the initial data as well as specifically the Demon Slayer data</p>
-                <code>
-
-                </code>
-                <p id="explanation">explanation here</p>
-        </section>
-
     <!--!  TITLE - IMAGE - EPISODE SECTION -->
 
         <section class="main-section" id="title-data">
             <header id="getAnimeFullById">Method to access the Japanese & English title for Demon Slayer the anime</header>
+            <hr>
             <section>
                 <!-- <h2>Method to access the Japanese & English title for Demon Slayer</h2> -->
                 <p class="insert-info" id="insert-title"></p>
-                <code>
+                <p id="explanation">Code used below</p>
+                <hr>
+                <code id="title-code">
                     let JapaneseTitle;<br><br>
                     let englishTitle;<br><br>
                     function title() {<br><br>
@@ -56,16 +47,18 @@
                       console.log("Japanese Title: ",JapaneseTitle,"English Title: ",englishTitle) <br><br>
                     }
                 </code>
-                <p id="explanation">explanation here</p>
+                <hr>
             </section>
         </section>
 
         <section class="main-section" id="image-data">
             <header id="getAnimeFullById">Method to access a large image for Demon Slayer</header>
+            <hr>
             <section>
                 <!-- <h2>Method to access a large image for Demon Slayer</h2> -->
                 <p class="insert-info" id="insert-image"></p>
-                <code>
+                <p id="explanation">Code used below</p>
+                <code id="image-code">
                     function firstImage() { <br><br>
                         let grabbedImage = jsonData['images']['jpg']['large_image_url']<br><br>
                         console.log("Here is the image: ", grabbedImage)<br><br>
@@ -75,14 +68,17 @@
                         imageSection.appendChild(newImgElement);<br><br>
                       }
                 </code>
-                <p id="explanation">explanation here</p>
+                <hr>
             </section>  
         </section>
-S
+
         <section class="main-section" id="episode-list-data">
             <header class="insert-info" id="s1EpisodeNumber"></header>
+            <hr>
             <section>
-                <code>
+                <p id="explanation">Using the same api url to also grab the episode amount data</p>
+                <p id="explanation">Code used below</p>
+                <code id="episode-code">
                     
                     function episodeAmount() { <br><br>
                         console.log("There are: ",jsonData['episodes']," episodes")<br><br>
@@ -91,11 +87,13 @@ S
                     }
                     
                 </code>
-                <p id="explanation">Using the same api url to also grab the episode amount data</p>
-       
+                <hr>
+                
                 <ul class="episodes-list" id='insert-episode-list'>
                 </ul>
-
+                <hr>
+                <p id="explanation">Needed to use a different <a href='https://api.jikan.moe/v4/anime/${animeId}/episodes" to grab the episode list'>api link</a> for this list</p>               
+                <p id="explanation">Code used below</p>               
                 <code>
                     const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/episodes`) <br><br>
                     
@@ -118,84 +116,11 @@ S
                         }
                     }
                 </code>
+                <hr>
 
-                <p id="explanation">Needed to use a different <a href='https://api.jikan.moe/v4/anime/${animeId}/episodes" to grab the episode list'>api link</a> for this list</p>
-                <!-- <li> <a id="external-link" href="">hmmmmm 1</a></li> -->
-               
-            </section>
-        </section>
-
-
-
-    <!--!  MORE... SECTION -->
-
-    <!-- <section class="main-section">
-        <header id="getAnimeFullById">REFERENCE JIKAN API AND ANIME LIST HERE</header>
-        <section>
-            <p>Method to access the episode amount</p>
-            <p class="insert-info" id="insert-episode-number">insert amount of episodes here</p>
-            <code></code>
-            <p id="explanation">explanation here</p>
-        </section>
-    </section> -->
-
-
-        <!-- ! need to remake bottom portion based on the above -->
-
-        
-        <!-- <section class="main-section">
-            <header id="getAnimeCharacters">getAnimeCharacters</header>
-
-            <section>
-                <p>2</p>
-                <code></code>
-                <li></li>
-                <a id="nav-link" href="#"></a>
-            </section>
-
-        </section>
-
-        <section class="main-section">
-            <header id="getAnimeEpisodes">getAnimeEpisodes</header>
-
-            <section>
-                <p>3</p>
-                <code></code>
-                <li></li>
-                <a id="nav-link" href="#"></a>
-            </section>
-
-        </section>
-
-        
-        <section class="main-section">
-            <header id="getAnimeRecommendations">getAnimeRecommendations</header>
-
-            <section>
-                <p>4</p>
-                <code></code>
-                <li></li>
-                <a id="nav-link" href="#"></a>
-            </section>
-
-        </section>
-
-        
-
-        <section class="main-section">
-            <header id="getAnimeNews">getAnimeNews</header>
-            
-            <section>
-                <p>5</p>
-                <code></code>
-                <li></li>
-                <a id="nav-link" href="#"></a>
             </section>
         </section>
         
-    </section> -->
-
-    
     </main>
 </body>
 </html>

@@ -76,6 +76,12 @@ body, html {
     background-color: #fff;
 }
 
+.main-section {
+  /* background-color: red; */
+  /* margin: 0; */
+  padding: 20px;
+}
+
 
 header{
     font-size: 24px;
