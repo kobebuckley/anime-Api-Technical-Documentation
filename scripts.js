@@ -45,6 +45,9 @@ let englishTitle;
 function title() {
   let JapaneseTitle = jsonData['title_japanese']
   let englishTitle = jsonData['title_english']
+  let titleInsert = document.getElementById("insert-title");
+  titleInsert.innerHTML = "Japanese Title - " + JapaneseTitle + "<br>English Title - " + englishTitle
+
   console.log("Japanese Title: ",JapaneseTitle,"English Title: ",englishTitle)
 }
 
@@ -66,22 +69,25 @@ function firstImage() {
 
 function episodeAmount() {
   console.log("There are: ",jsonData['episodes']," episodes")
+  let episodeAmount = document.getElementById("s1EpisodeNumber")
+  episodeAmount.innerHTML = "Method to show the list of episodes in Demon Slayer S1 (" + jsonData['episodes']+" episodes)";
 }
+
+
+
 
 
 function episodeList() {
   console.log("Episode List is: ", jsonEpisodeData);
-
-  var episodeContainer = document.getElementById("insert-episode-list");
-
-  for (var i = 0; i < jsonEpisodeData.length; i++) {
-    var episode = jsonEpisodeData[i];
-
-    var episodeLi = document.createElement("li");
+  let episodeContainer = document.getElementById("insert-episode-list");
+  for (let i = 0; i < jsonEpisodeData.length; i++) {
+    let episode = jsonEpisodeData[i];
+    episodeAmount.appendChild
+    let episodeLi = document.createElement("li");
     episodeLi.innerHTML = "<h3>" + "Episode # : " + episode.mal_id + "</h3>" +
                           "<h4>" + episode.title_japanese + " : " + episode.title + "</h4>";
 
-    var episodeLink = document.createElement("a");
+    let episodeLink = document.createElement("a");
     episodeLink.target = "_blank";
     episodeLink.href = episode.url;
     episodeLink.textContent = "Link to Episode";
